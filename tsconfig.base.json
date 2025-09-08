@@ -1,0 +1,28 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@org/antipassback": ["packages/project-two/antipassback/src/index.ts"],
+      "@org/core": ["packages/shared/core/src/index.ts"],
+      "@org/door": ["packages/project-one/door/src/index.ts"],
+      "@org/notification": ["packages/project-two/notification/src/index.ts"],
+      "@org/shared": ["packages/shared/shared/src/index.ts"],
+      "@org/templates": ["packages/project-one/templates/src/index.ts"],
+      "@org/theme": ["packages/shared/theme/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
