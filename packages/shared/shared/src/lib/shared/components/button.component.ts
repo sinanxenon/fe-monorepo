@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
     <button
       style="background-color: red; color: white; padding: 10px; border-radius: 5px; border: none; cursor: pointer;"
     >
-      shared button!!
+      shared button
     </button>
   `,
 })
