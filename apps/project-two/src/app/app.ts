@@ -20,8 +20,13 @@ export class App {
   response: any = '';
 
   ngOnInit() {
-    this.http.get('api/hello').subscribe((res) => {
-      this.response = res;
-    });
+    if (environment.environmentName === 'development') {
+      console.log('Development environment');
+      this.http.get('api/hello').subscribe((res) => {
+        this.response = res;
+      });
+    } else {
+      console.log('Production environment');
+    }
   }
 }
