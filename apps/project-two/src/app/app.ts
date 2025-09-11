@@ -5,9 +5,16 @@ import { Notification } from '@org/notification';
 import { Antipassback } from '@org/antipassback';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '@env/project-two';
+import { JsonPipe } from '@angular/common';
 
 @Component({
-  imports: [RouterModule, ButtonComponent, Notification, Antipassback],
+  imports: [
+    RouterModule,
+    ButtonComponent,
+    Notification,
+    Antipassback,
+    JsonPipe,
+  ],
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
