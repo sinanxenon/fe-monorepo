@@ -16,7 +16,7 @@ if [[ "$BUILD_ENV" == "production" ]] ; then
   # Production environment
   echo "Production build is running: nx build $PROJECT_NAME --configuration=production"
   npx nx build $PROJECT_NAME --configuration=production
-elif [[ "$BUILD_ENV" == "preview" ]] ; then
+elif [[ "$BUILD_ENV" == "staging" ]] ; then
   # Preview (PR'lar için) environment
   echo "Preview build is running: nx build $PROJECT_NAME --configuration=staging"
   npx nx build $PROJECT_NAME --configuration=staging
