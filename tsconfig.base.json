@@ -21,7 +21,9 @@
       "@org/notification": ["packages/project-two/notification/src/index.ts"],
       "@org/shared": ["packages/shared/shared/src/index.ts"],
       "@org/templates": ["packages/project-one/templates/src/index.ts"],
-      "@org/theme": ["packages/shared/theme/src/index.ts"]
+      "@org/theme": ["packages/shared/theme/src/index.ts"],
+      "@env/project-one": ["apps/project-one/src/environments/environment.ts"],
+      "@env/project-two": ["apps/project-two/src/environments/environment.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

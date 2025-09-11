@@ -25,24 +25,41 @@
       },
       "configurations": {
         "production": {
+          "optimization": {
+            "scripts": true,
+            "styles": { "minify": true, "inlineCritical": false },
+            "fonts": true
+          },
           "budgets": [
             {
               "type": "initial",
-              "maximumWarning": "500kb",
-              "maximumError": "1mb"
-            },
-            {
-              "type": "anyComponentStyle",
-              "maximumWarning": "4kb",
-              "maximumError": "8kb"
+              "maximumWarning": "2MB",
+              "maximumError": "4MB"
             }
           ],
           "outputHashing": "all"
         },
+        "staging": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "fileReplacements": [
+            {
+              "replace": "apps/project-one/src/environments/environment.ts",
+              "with": "apps/project-one/src/environments/environment.staging.ts"
+            }
+          ]
+        },
         "development": {
           "optimization": false,
           "extractLicenses": false,
-          "sourceMap": true
+          "sourceMap": true,
+          "fileReplacements": [
+            {
+              "replace": "apps/project-one/src/environments/environment.ts",
+              "with": "apps/project-one/src/environments/environment.development.ts"
+            }
+          ]
         }
       },
       "defaultConfiguration": "production"
@@ -50,9 +67,15 @@
     "serve": {
       "continuous": true,
       "executor": "@angular/build:dev-server",
+      "options": {
+        "proxyConfig": "apps/project-one/proxy.config.json"
+      },
       "configurations": {
         "production": {
           "buildTarget": "project-one:build:production"
+        },
+        "staging": {
+          "buildTarget": "project-one:build:staging"
         },
         "development": {
           "buildTarget": "project-one:build:development"
